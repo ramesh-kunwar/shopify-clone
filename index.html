@@ -1,24 +1,290 @@
 <!doctype html>
 <html>
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+    integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@2.24.0/dist/full.css" rel="stylesheet" type="text/css" />
+
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       theme: {
+
+        screens: {
+          sm: '300px',
+          md: '768px',
+          lg: '976px',
+          xl: '1440px'
+        },
         extend: {
           colors: {
-            clifford: '#da373d',
+            btnGreen: '#007f61',
+            darkGreen: '#004c3f',
+            headerBgColor: '#fbf7ec'
           }
         }
+
       }
     }
   </script>
 </head>
-<body class="md:bg-clifford">
-  <h1 class="text-3xl font-bold underline **text-clifford**">
-    Hello world!
-  </h1>
+
+<body class="bg-white text-black">
+  <div class="navbar bg-white container mx-auto ">
+    <div class="navbar-start">
+      <div class="dropdown">
+        <label tabindex="0" class="btn btn-ghost lg:hidden">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+          </svg>
+        </label>
+        <ul tabindex="0" class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
+
+          <li tabindex="0">
+            <a class="justify-between">
+              Start
+              <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
+              </svg>
+            </a>
+            <ul class="p-2">
+              <li><a>Branding</a></li>
+              <li><a>Online Presence</a></li>
+              <li><a>Store set up</a></li>
+            </ul>
+          </li>
+          <li tabindex="0">
+            <a class="justify-between">
+              Sell
+              <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
+              </svg>
+            </a>
+            <ul class="p-2">
+              <li><a>Branding</a></li>
+              <li><a>Online Presence</a></li>
+              <li><a>Store set up</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <a class="btn btn-ghost normal-case text-xl">
+        <img class="w-[100px]" src="./images/shopify-logo.png" alt="">
+      </a>
+    </div>
+    <div class="navbar-center hidden lg:flex">
+      <ul class="menu menu-horizontal p-0 ">
+        <li><a>Manage</a></li>
+        <li tabindex="0">
+          <a>
+            Start
+            <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+              <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
+            </svg>
+          </a>
+          <ul class="p-2">
+            <li><a>Sell everywhere</a></li>
+            <li><a>Online Store</a></li>
+            <li><a>Point of Sale</a></li>
+            <li><a>Buy Button</a></li>
+            <li><a>Checkout</a></li>
+            <li><a>Sales chanels</a></li>
+          </ul>
+        </li>
+        <li tabindex="0">
+          <a>
+            Sell
+            <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+              <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
+            </svg>
+          </a>
+          <ul class="p-2">
+            <li><a>Sell everywhere</a></li>
+            <li><a>Online Store</a></li>
+            <li><a>Point of Sale</a></li>
+            <li><a>Buy Button</a></li>
+            <li><a>Checkout</a></li>
+            <li><a>Sales chanels</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="navbar-end">
+      <a class="btn bg-btnGreen text-white">Try for free</a>
+    </div>
+  </div>
+
+  <!-- hero section -->
+  <div id="hero" class="bg-headerBgColor">
+    <div class="flex sm:flex-col-reverse md:flex-row  text-dark items-center">
+      <div class="left sm:px-5 md:px-10 lg:px-20">
+
+        <h1 class="font-bold text-4xl my-8 ">
+          The easiest way to sell <br> online in India
+        </h1>
+        <p class="text-lg mb-2">
+          Try one of the most powerful platforms on the market for free. No technical knowledge needed.
+        </p>
+
+        <div class="form mt-8 flex items-center ">
+          <input type="email"
+            class="mr-2 sm:hidden md:inline-flex md:w-[200px] lg:w-[250px] px-2 py-2 width-full rounded border-solid border-2 border-btnGreen">
+          <!-- <input type="email" placeholder="Enter your email" class="input input-accent  mr-2 w-full max-w-xs bg-white my-5" /> -->
+          <a class="btn bg-darkGreen text-white ">Try for free</a>
+
+        </div>
+        <p class="my-5 font-sm text-sm text-gray-500">
+          Try Shopify free for 14 days, no credit card required. By entering your email, you agree to receive marketing
+          emails from Shopify.
+        </p>
+      </div>
+      <div class="right">
+        <img src="./images/hero-image.webp" alt="">
+      </div>
+    </div>
+  </div>
+
+  <!-- bring your business online -->
+  <div id="business" class=" bg-darkGreen py-20 px-5">
+    <div class=" container mx-auto text-white">
+      <h1 class="font-medium text-3xl">
+        Bring your business online
+      </h1>
+      <p class="py-5">
+        Create an ecommerce website backed by powerful tools that help you find customers, drive sales, and manage your
+        day-to-day.
+      </p>
+      <h5 class="font-medium text-xl flex items-center">
+        Explore more examples <i class="ml-3 fas fa-arrow-right"></i>
+      </h5>
+
+      <div class="container mx-auto my-20  grid  sm:grid-cols-1 md:grid-cols-4 gap-4">
+        <div class="item">
+          <img src="./images/business-1.webp" alt="">
+          <h5 class="mt-5 text-lg font-bold">
+            FOOD & DRINK
+          </h5>
+          <h4 class="text-xl">
+            Blue Tokai
+          </h4>
+        </div>
+        <div class="item">
+          <img src="./images/business-1.webp" alt="">
+          <h5 class="mt-5 text-lg font-bold">
+            FOOD & DRINK
+          </h5>
+          <h4 class="text-xl">
+            Blue Tokai
+          </h4>
+        </div>
+        <div class="item">
+          <img src="./images/business-1.webp" alt="">
+          <h5 class="mt-5 text-lg font-bold">
+            FOOD & DRINK
+          </h5>
+          <h4 class="text-xl">
+            Blue Tokai
+          </h4>
+        </div>
+        <div class="item">
+          <img src="./images/business-1.webp" alt="">
+          <h5 class="mt-5 text-lg font-bold">
+            FOOD & DRINK
+          </h5>
+          <h4 class="text-xl ">
+            Blue Tokai
+          </h4>
+        </div>
+      </div>
+
+      <!-- best path forward -->
+      <div id="best-platform" class="pt-20">
+        <h1 class="font-bold text-5xl ">
+          Take the best path forward
+        </h1>
+        <div class="grid lg:grid-cols-4 sm:grid-cols-1 md:grid-cols-2 md:space-x-6  mt-20">
+          <div class="item">
+            <div class="icon">
+              <i class="fa-solid fa-arrows-spin text-6xl text-green-300"></i>
+            </div>
+            <h3 class="font-bold text-md my-4">
+              Start an online business
+            </h3>
+            <p>Create a business, whether you’ve got a fresh idea or are looking for a new way to make money.</p>
+          </div>
+          <div class="item">
+            <div class="icon">
+              <!-- <i class="fa-solid fa-arrows-spin text-6xl text-green-300"></i> -->
+              <i class="fa-solid fa-earth-europe text-6xl text-green-300"></i>
+            </div>
+            <h3 class="font-bold text-md my-4">
+              Move your business online
+            </h3>
+            <p>Turn your retail store into an online store and keep serving customers without missing a beat.</p>
+          </div>
+          <div class="item">
+            <div class="icon">
+              <i class="fa-solid fa-repeat text-6xl text-green-300"></i>
+            </div>
+            <h3 class="font-bold text-md my-4">
+              Switch to Shopify
+            </h3>
+            <p>Bring your business to Shopify, no matter which ecommerce platform you’re currently using.</p>
+          </div>
+          <div class="item">
+            <div class="icon">
+              <i class="fa-solid fa-person-circle-check text-6xl text-green-300"></i>
+            </div>
+            <h3 class="font-bold text-md my-4">
+              Hire a Shopify expert
+            </h3>
+            <p>Get set up with the help of a trusted freelancer or agency from the Shopify Experts Marketplace.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div id="going" >
+    <div class="container mx-auto my-20 px-5 ">
+  <div class="heading text-center">
+    <h1 class="font-medium text-4xl">
+      With you wherever you’re going
+    </h1>
+    <p class="text-lg my-10">
+      One platform with all the ecommerce and point of sale features <br> you need to start, run, and grow your business.
+    </p>
+
+  </div>
+      <div class="container mx-auto sm:px-5 flex sm:flex-col md:flex-row md:space-x-6 items-center">
+        <div class="left">
+          <video width="" height="" autoplay>
+            <source src="./video/going.webm" type="video/mp4">
+           
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="right">
+          <h2 class="font-medium text-3xl">
+            Sell everywhere
+          </h2>
+          <p class="my-4">
+            Use one platform to sell products to anyone, anywhere—in person with Point of Sale and online through your website, social media, and online marketplaces.
+          </p>
+          <h5 class="font-medium text-lg text-green-700">
+            Explore ways to sell  <i class="ml-2 fa-solid fa-arrow-right"></i>
+          </h5>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
+
 </html>
