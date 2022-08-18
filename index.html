@@ -36,7 +36,7 @@
 </head>
 
 <body class="bg-white text-black">
-  <div class="navbar bg-white container mx-auto ">
+  <div class="navbar bg-white px-5 md:container md:mx-auto ">
     <div class="navbar-start">
       <div class="dropdown">
         <label tabindex="0" class="btn btn-ghost lg:hidden">
@@ -75,9 +75,21 @@
           </li>
         </ul>
       </div>
-      <a class=" btn btn-ghost normal-case text-xl">
+      <!-- <a class=" btn btn-ghost normal-case text-xl">
         <img class="w-[100px] " src="./images/shopify-logo.png" alt="">
-      </a>
+      </a> -->
+      <div class="sm:hidden lg:inline">
+        <!-- <h1 class="text-white font-bold text-2xl ">Hello</h1> -->
+        <img class="w-20" src="/images/shopify-logo.png" alt="" />
+      </div>
+    </div>
+    <div class="md:inline lg:hidden">
+      <!-- <h1 class="text-white font-bold text-2xl ">Hello</h1> -->
+      <img
+        class="w-20 sm:navbar-center md:navbar-start"
+        src="/images/shopify-logo.png"
+        alt=""
+      />
     </div>
     <div class="navbar-center hidden lg:flex">
       <ul class="menu menu-horizontal p-0 ">
@@ -116,8 +128,8 @@
         </li>
       </ul>
     </div>
-    <div class="navbar-end sm:hidden md:inline-flex">
-      <a class="btn bg-btnGreen text-white">Try for free</a>
+    <div class="navbar-end ">
+      <a class="px-3  py-2 rounded-lg cursor-pointer  bg-btnGreen text-white">Try for free</a>
     </div>
   </div>
 
